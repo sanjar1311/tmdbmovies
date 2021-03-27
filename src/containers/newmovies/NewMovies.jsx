@@ -17,7 +17,7 @@ function NewMovies() {
 
   
   useEffect(()=> {
-    axios.get('https://api.themoviedb.org/3/movie/popular/', {
+    axios.get('https://api.themoviedb.org/3/movie/popular', {
       params: {
         api_key: 'a06ebeee16246cf7c860221dd5c579a1'
       }
