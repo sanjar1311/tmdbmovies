@@ -13,7 +13,7 @@ function NewMovies() {
     isFatching: false,
     data: [],
     error: null
-  })
+  });
 
   
   useEffect(()=> {
@@ -26,17 +26,9 @@ function NewMovies() {
       setMovie({
         isFatching: true,
         data: response.data,
-        error: false
       })
     })
-    .catch(function (error) {
-      setMovie({
-        isFatching: true,
-        data: [],
-        error: true
-      })
-    }) 
-  }, [])
+  }, []);
    
   
   return(
@@ -45,9 +37,9 @@ function NewMovies() {
       <ul className="popular-movies-list">
         {
           movie.isFatching ? (
-            movie.data.results && movie.data.results.map((item, index)=> (
+             movie.data.results.map(item=> (
               <MovieCard 
-                key={index}
+                key={item.id}
                 id={item.id}
                 rating={item.vote_average}
                 img={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
