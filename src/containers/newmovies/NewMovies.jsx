@@ -1,5 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 
 import MovieCard from "../../components/movieCard/MovieCard"
 import {Context} from "../../components/Context"
@@ -16,19 +16,28 @@ function NewMovies() {
   });
 
   
+  // useEffect(()=> {
+  //   axios.get('https://api.themoviedb.org/3/movie/popular', {
+  //     params: {
+  //       api_key: 'a06ebeee16246cf7c860221dd5c579a1'
+  //     }
+  //   })
+  //   .then(function (response) {
+  //     setMovie({
+  //       isFatching: true,
+  //       data: response.data,
+  //     })
+  //   })
+  // }, []);
+
   useEffect(()=> {
-    axios.get('https://api.themoviedb.org/3/movie/popular', {
-      params: {
-        api_key: 'a06ebeee16246cf7c860221dd5c579a1'
-      }
-    })
-    .then(function (response) {
-      setMovie({
-        isFatching: true,
-        data: response.data,
-      })
-    })
-  }, []);
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=a06ebeee16246cf7c860221dd5c579a1')
+    .then(response => response.json())
+    .then(data => setMovie({
+      isFatching: true,
+      data: data,
+    }))
+  }, [])
    
   
   return(
