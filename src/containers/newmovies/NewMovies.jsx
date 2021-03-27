@@ -24,14 +24,14 @@ function NewMovies() {
     })
     .then(function (response) {
       setMovie({
-        loading: true,
+        isFatching: true,
         data: response.data,
         error: false
       })
     })
     .catch(function (error) {
       setMovie({
-        loading: true,
+        isFatching: true,
         data: [],
         error: true
       })
@@ -44,7 +44,7 @@ function NewMovies() {
       <h2 className="page-title">популярные фильмы</h2>
       <ul className="popular-movies-list">
         {
-          movie.loading ? (
+          movie.isFatching ? (
             movie.data.results.map((item, index)=> (
               <MovieCard 
                 key={index}
