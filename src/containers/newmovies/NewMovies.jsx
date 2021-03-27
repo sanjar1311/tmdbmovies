@@ -45,7 +45,7 @@ function NewMovies() {
       <ul className="popular-movies-list">
         {
           movie.isFatching ? (
-            movie.data.results.map((item, index)=> (
+            movie.data.results && movie.data.results.map((item, index)=> (
               <MovieCard 
                 key={index}
                 id={item.id}
