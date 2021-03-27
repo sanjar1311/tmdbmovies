@@ -1,0 +1,39 @@
+.loader {
+  display: flex;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.popular-movies {
+  width: 100%;
+  display: flex;
+}
+.movies-list {
+  transition: all .6s ease;
+  padding: 20px;
+}
+.popular-movies-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.movies-list.light {
+  background-color: #fff;
+  color: #222;
+}
+
+.movies-list.dark {
+  background-color: #111B23;
+  color: #fff;
+}
+.page-title {
+  font-size: 36px;
+  text-transform: capitalize;
+  margin: 20px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+}
