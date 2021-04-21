@@ -27,32 +27,32 @@ function Corusel() {
         <ul className="slider-list">
           <li className="slider-item">
             <Link to={`/movie/${791373}`} className="slider-link">
-              <img src={Betman} width="1600" height="500" alt="Betman"/>
+              <img className="slider__img" src={Betman} width="1600" height="500" alt="Betman"/>
             </Link>
           </li>
           <li className="slider-item">
             <Link to={`/movie/${464052}`} className="slider-link">
-              <img src={WonderWoman} width="1600" height="500" alt="WonderWoman"/>
+              <img className="slider__img" src={WonderWoman} width="1600" height="500" alt="WonderWoman"/>
             </Link>
           </li>
           <li className="slider-item">
             <Link to={`/movie/${337401}`} className="slider-link">
-              <img src={Mulan} width="1600" height="500" alt="Mulan"/>
+              <img className="slider__img" src={Mulan} width="1600" height="500" alt="Mulan"/>
             </Link>
           </li>
           <li className="slider-item">
             <Link to={`/movie/${661804}`} className="slider-link">
-              <img src={Goll} width="1600" height="500" alt="De Goll"/>
+              <img className="slider__img" src={Goll} width="1600" height="500" alt="De Goll"/>
             </Link>
           </li>
           <li className="slider-item">
             <Link to={`/movie/${661804}`} className="slider-link">
-              <img src={Kaxa} width="1600" height="500" alt="Kaxa"/>
+              <img className="slider__img" src={Kaxa} width="1600" height="500" alt="Kaxa"/>
             </Link>
           </li>
           <li className="slider-item">
             <Link to={`/movie/${661804}`} className="slider-link">
-              <img src={Real} width="1600" height="500" alt="Real"/>
+              <img className="slider__img" src={Real} width="1600" height="500" alt="Real"/>
             </Link>
           </li>
         </ul>
